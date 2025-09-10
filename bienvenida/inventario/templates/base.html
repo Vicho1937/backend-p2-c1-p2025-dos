@@ -1,0 +1,8 @@
+<body>
+    {% if mesagge %}
+        <u1>
+            {% for message in messages %}<li>{{ message }}</li>{% endfor %}            
+        </u1>
+    {% endif %}
+    {% block content %}{% endblock %}
+</body>
