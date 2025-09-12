@@ -7,7 +7,7 @@ def inicio(request):
     return HttpResponse("Hola mundo desde Django")
 
 def mostrar_bienvenida(request):
-    tu_nombre = "Sebastian Morales"
+    tu_nombre = "Vicente García"
     return HttpResponse(f"¡Bienvenidos a mi primera app Django, {tu_nombre}!")
 
 def lista_productos(request):

@@ -5,8 +5,9 @@
 {% endblock %}
 
 {% block header %}
-  <header>
+  <header class="flex gap-6">
     <h1>Vista Productos</h1>
+    <a class="underline" href="{% url 'producto_create' %}">Agregar producto</a>
   </header>
 {% endblock %}
 
@@ -15,12 +16,12 @@
 {% endblock %}
 
 {% block content %}
-<section>
-    <h2>Productos disponibles</h2>
+<section class="p-8" gap-4 felx felx-col w-full">
+    <h2 class="text-lg">Productos disponibles</h2>
     <p>Aquí encontraras las mejores frutas disponibles</p>
     <ul>
-        {% for producto in productos %}
-        <li class="flex flex-col gap-1">
+        {% for producto in object_list %}
+        <li class="flex flex-row gap-1 border p-2 bg-white shadow">
             <span>{{ producto.nombre }}</span>
             <span>{{ producto.precio }}</span>
             <span>{{ producto.descripcion }}</span>
